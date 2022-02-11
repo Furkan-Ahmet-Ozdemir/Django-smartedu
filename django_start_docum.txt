@@ -1,0 +1,40 @@
+python -m venv env   // python dilinin değişiminden etkilenmemek için kendine özel bir sanal ortam kurar
+env\Scripts\activate //  sanal ortamı başlatır
+pip freeze           // sanal ortamdaki kurulu paketleri gösterir
+pip install Django   // sanal ortama Django kuruyoruz
+python -m pip install --upgrade pip  // pip i güncelliyoruz
+django-admin --help  //  komutları görmek için
+django-admin startproject
+smartedu dosyasını smartedu_con olarak edğiştirdik karışmaması için
+cd smartedu_con
+python manage.py runserver // serverı başlatır
+deactivate  // sanal ortamdan çıkamk için
+python manage.py startapp pages  // uygulama başlatmak için
+
+
+
+.gitignore  // dosyası oluşturulur gereksiz dosyaları gite dahil etmemesi için(https://www.toptal.com/developers/gitignore sitesinde Django yazarak kopyala)
+git init    // ana dizinde git tanımlama için çalıştırılır
+git status  // 
+git add .   // tüm dosyaları ekler
+git commit -m "Lesson 1" //
+git remote add origin https://github.com/Furkan-Ahmet-Ozdemir/Django-smartedu.git  
+git branch -M main
+
+python manage.py createsuperuser  // admin oluşturmak için
+kullanıcı eklerken şifre ve isim hatalarını görmemek için/ settings.py validators ları yorum satırına al
+
+Model Oluşturmak
+models.py // dosyasında istenilen özellikler ve nesne adı yazılır 
+python manage.py makemigrations // migrations dosyası oluşturulur
+python manage.py migrate        // veri tabanını oluşturur 
+
+
+Admin de Model
+admin.py içinde modelimizi tanıtırız 
+from . models import mode_name
+admin.site.register(mode_name)
+
+
+
+
