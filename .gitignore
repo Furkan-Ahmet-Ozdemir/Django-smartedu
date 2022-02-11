@@ -168,6 +168,7 @@ cython_debug/
 
 
 
+.env
 
 .vscode/*
 !.vscode/settings.json
